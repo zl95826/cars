@@ -24,10 +24,10 @@ const config: Config = {
         },
         grey: "#747A88",
       },
-      // backgroundImage: {
-      //   pattern: "url('/pattern.png')",
-      //   "hero-bg": "url('/hero-bg.png')",
-      // },
+      backgroundImage: {
+        pattern: "url('/pattern.png')",
+        "hero-bg": "url('/hero-bg.png')",
+      },
     },
   },
   plugins: [],
@@ -38,3 +38,8 @@ export default config;
 //This is because the public directory is the root directory for publicly accessible files in a Next.js application.
 //When you specify a URL without the /public prefix,
 //Tailwind CSS assumes that the path is relative to the public directory by default.
+
+//In JavaScript, object keys can be defined without quotes if they are valid identifiers (consist of letters, digits, underscores, and dollar signs, and don't start with a digit).
+//If a key doesn't follow the rules of a valid identifier, it should be enclosed in quotes.
+//The key pattern is a valid identifier.On the other hand, hero-bg includes a hyphen, making it an invalid identifier,
+//so it is enclosed in quotes to define it as a string key.

@@ -54,13 +54,13 @@
   @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
 }
 
-/* .hero__image {
+.hero__image {
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
-} */
+}
 
-/* .hero__image-overlay {
+.hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
-} */
+}
 /* END: Hero styles */
 
 /* START: Home styles */
@@ -141,9 +141,9 @@
   @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full;
 }
 
-/* .car-details__main-image {
+.car-details__main-image {
   @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
-} */
+}
 /* END: Car Details styles */
 
 /* START: Custom Filter styles */
