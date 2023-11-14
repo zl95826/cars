@@ -4,11 +4,12 @@ import CustomButton from "./CustomButton";
 import Image from "next/image";
 const Hero = () => {
   const handleScroll = () => {};
+  const heroImage = "/hero.png";
   return (
     <div
       className="hero"
       style={{
-        backgroundImage: "url('/hero.png')",
+        backgroundImage: `url(${heroImage})`, //backgroundImage: `url('/hero.png')`,
         backgroundPosition: "right bottom",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
