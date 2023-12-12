@@ -16,7 +16,8 @@ const SearchManufacturer = () => {
         );
   return (
     <div>
-      <Combobox value="" onChange={() => {}}>
+      <Combobox value={selected} onChange={setSelected}>
+        {/*value prop is the selected value, onChange: the function to call when a new option is selected. */}
         <Combobox.Input
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Volkswagen..."
