@@ -1,4 +1,4 @@
-import { Hero, SearchBar } from "@/components";
+import { Hero, SearchBar, CarCard } from "@/components";
 import { fetchCars } from "@/utils";
 import Image from "next/image";
 //
@@ -18,7 +18,12 @@ export default async function Home() {
           <SearchBar />
         </div>
         {!isDataEmpty ? (
-          <section>WE HAVE CARS</section>
+          <section>
+            <div className="home__cars-wrapper">
+              {!isDataEmpty &&
+                allCars.map((car, index) => <CarCard key={index} car={car} />)}
+            </div>
+          </section>
         ) : (
           <div>
             <h2>Oops, no results</h2>
