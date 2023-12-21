@@ -2,7 +2,8 @@
 import { CarProps } from "@/types";
 import React, { useState } from "react";
 import { calculateCarRent } from "@/utils";
-import { CustomButton } from ".";
+import { CustomButton, CarDetails } from ".";
+
 interface CarCardProps {
   car: CarProps;
 }
@@ -50,6 +51,11 @@ const CarCard = ({ car }: CarCardProps) => {
           />
         </div>
       </div>
+      <CarDetails
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+        car={car}
+      />
     </div>
   );
 };
