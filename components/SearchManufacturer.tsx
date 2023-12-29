@@ -8,7 +8,6 @@ const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
 }: SearchManufacturerProps) => {
-  const [selected, setSelected] = useState("");
   const [query, setQuery] = useState("");
   const filteredManu =
     query === ""
@@ -22,7 +21,7 @@ const SearchManufacturer = ({
   return (
     <>
       <div className="search-manufacturer">
-        <Combobox value={selected} onChange={setSelected}>
+        <Combobox value={manufacturer} onChange={setManufacturer}>
           {/*value prop is the selected value, onChange: the function to call when a new option is selected. */}
           <div className="relative w-full">
             <Combobox.Input
