@@ -29,6 +29,7 @@ const SearchManufacturer = ({
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Volkswagen..."
               displayValue={(item: string) => item}
+              autoComplete="off" //disable autoComplete
             />
             <Transition
               as={Fragment}

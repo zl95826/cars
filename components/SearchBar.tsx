@@ -32,7 +32,7 @@ const SearchBar = () => {
     const newPathname = `${
       window.location.pathname
     }?${searchParams.toString()}`;
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
   };
   return (
     <form className="searchbar" onSubmit={handleSearch}>
@@ -41,7 +41,7 @@ const SearchBar = () => {
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        {/* <SearchButton otherClasses="max-sm:hidden" /> */}
+        <SearchButton otherClasses="sm:hidden" />
       </div>
       <div className="searchbar__item">
         <input
@@ -51,7 +51,9 @@ const SearchBar = () => {
           onChange={(e) => setModel(e.target.value)}
           placeholder="Tiguan..."
           className="searchbar__input"
+          autoComplete="off"
         />
+        <SearchButton otherClasses="sm:hidden" />
       </div>
       <SearchButton otherClasses="max-sm:hidden" />
     </form>
